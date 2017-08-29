@@ -1,0 +1,153 @@
+/* Codecademy Intensive Pro "Build Websites From Scratch": Unit 4, Days 14-16. Submission by P.Mroz. */
+body{
+  font-family: helvetica;
+  background-color: black;
+  color: seashell;
+  font-size: 22px;
+  opacity: 0.9;
+  text-align: center;
+  margin-top: 0px; /* Body seems to default to 8px margin on all sides, so in order for things not to show up above the header when scrolling, I manually set the margin to 0px; */
+}
+h2 h4 {
+  margin: 10px 0px;
+}
+h3 {
+  margin: 0px;
+}
+h5 {
+  margin: 10px 0px 30px 0px;
+}
+
+/*** HEADER STYLES ***/
+header{
+  height: 69px;
+  width: 100%; /* Allows the menu to alway take up the width of the screen */display: flex;
+  position: fixed; /* This keeps the menu bar always visible*/
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid seashell;
+  background-color: black;
+  padding-top: 8px; /* correction for Body margin fix noted above*/
+  z-index: 10; /* This keeps the menu bar always on top */
+}
+.logo img {
+  height: 50px;
+  margin: 9px 75px 10px 10px;
+}
+nav.menu {
+  display: flex;
+  justify-content: space-between;
+  margin: 9px 10px 10px 50px;
+}
+.menu span{
+  width: 130px; /* Solved the problem of the "Featured Tea" Text wrapping when sized */
+}
+.menu a {
+  color: seashell;
+  text-decoration: underline;
+}
+/*** BODY STYLES ***/
+main{
+  width: 1200px; /* Width and Margin settings allow main section to be horizontally sized nicely */
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  z-index: 5px;
+  margin: 0px auto 5px auto;
+  padding-top: 69px; /* This keeps the menu bar from overlapping the main section */
+}
+
+/** Mission Statement Section **/
+#mission{
+  height: 700px;
+  display: flex;
+  align-items: center;
+  background-image: url(../images/img-mission-background.jpg); /*note that alt-images are not availabe in CSS*/
+}
+.mission_statement{
+  background-color: black;
+  width: 1200px;
+}
+
+/** Tea of the Month Section **/
+
+#features{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 75px 100px;
+}
+div.headings {
+  width: 1000px;
+}
+div.goods {
+  width: 1000px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+div.item {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.item img {
+  width: 300px;
+  height: 200px;
+}
+
+/** Location Section **/
+
+#location  {
+  height: 500px;
+  width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url(../images/img-locations-background.jpg);
+}
+#location h2{
+margin: 0px 0px 10px 0px;
+}
+div.addresses{
+  width: 980px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+div.address_box{ /* h3 margins set to 0px to properly space items in these boxes */
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: black;
+  opacity: 1;
+}
+
+/*** FOOTER STYLES ***/
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+div.contact_info {
+  height: 200px;
+  width: 600px;
+  margin: 0px auto 0px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contact_info h2 {
+  margin: 10px 0px 40px 0px;
+}
+h5.copyright {
+  margin: 60px 0px 30px 20px /* Special styling on this h3*/
+}
